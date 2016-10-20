@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<head>
+  <title>Video Player</title>
+  <link rel="stylesheet" type="text/css" href="../../css/videoCon.css" />
+</head>
+<body>
+	<!--<div id="resource-video-detail" width="100%" height="210px">
+		
+  </div>-->
+  		<section id="player">
+	  		<!--<video id="media" width="100%" height="210px" controls >
+	  			<source src="http://www.zhangxinxu.com/study/media/cat.mp4"></source>
+	  		</video> -->
+	  		<video id="media" width="100%" height="auto" style="background: #000000;" controls>
+		  		<source src="http://www.zhangxinxu.com/study/media/cat.mp4" type="video/mp4">
+		  		<!--<source src="http://www.zhangxinxu.com/study/media/cat.mp4" type="video/ogg">-->
+			</video>
+		</section>
+		
+		<div class="videoListBox bg">
+			<span class="videoList bgtitle">剧集</span>
+		</div>
+		<div id = "titlist" class="bg1">
+			<ul style="overflow: hidden; ">
+			  			<li class="active" tapmode="active" onclick=""><a>1</a></li>
+			  			<li class="" tapmode="active" onclick=""><a>2</a></li>
+	  		</ul>
+	  	</div>
+	  	
+	  	<div class="videoJianjieBox bg" >
+	  		<span class="videoJianjie bgtitle">视频简介</span>
+	  	</div>
+	  	<div class="jianjieConBox bg">
+	  		<span class="jianjieCon ">简介内容</span>
+	  	</div>
+	
+	  	</div>
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	<br />
+	  	
+	  	
+	  	
+	  	
+	  	
+</body>
+<script type="text/javascript" src="../script/zepto.js"></script>
+<script>
+//previous page id, current page id
+var preVid = '', curVid = '';
+
+//open tab
+function play(type){
+	var video = document.getElementById("media");
+     if (video.paused) {
+          video.play();
+       } else {
+          video.pause();
+       }
+}
+
+function init(){
+	preVid="1";
+}
+
+ytfready = function () {
+    init();
+}
+
+
+</script>
+</html>

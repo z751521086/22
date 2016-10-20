@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="../../css/ytui.css" />
+	</head>
+	<style type="text/css">
+		.ajaxButton{
+			text-align:center;
+		}
+		.btn{
+			width: 80%;
+		}
+	</style>
+	<body>
+		<div id="wrap">
+			<div class="mt30 ajaxButton">
+				<div class="btn bg-main mr20" ontouchstart="openWin2()">窗口组0</div>
+			</div>
+            <div class="mt30 ajaxButton">
+				<div class="btn bg-main mr20" ontouchstart="setFrameGroupIsLoop()">设置窗口组循环滑动</div>
+			</div>
+            <div class="mt30 ajaxButton">
+				<div class="btn bg-main mr20" ontouchstart="setFrameGroupNotLoop()">设置窗口组禁止循环滑动</div>
+			</div>
+			
+	</div>
+	</body>
+<script type="text/javascript" src="../../script/common.js" ></script>
+<script>
+	function openWin2(){
+		openNewWin('窗口2',filePath+'newWin.html',filePath+'newFrame2.html','newWin2','newFrame2')
+	}
+	
+	function closeAndOpenWin2(){
+		YTF.winClose();
+		openWin2();
+	}
+    
+    function setFrameGroupIsLoop(){
+        YTF.frameGroupSetAttr(
+        {
+            isLoop:true
+        });
+    }
+    
+    function setFrameGroupNotLoop(){
+        YTF.frameGroupSetAttr(
+        {
+            isLoop:false
+        });
+    }
+</script>
+</html>
